@@ -1,9 +1,10 @@
 #Пользователь вводит 3 числа, сказать сколько из них положительных и сколько отрицательных
 
-list_values = list(map( int, input("Enter values: "). split()))
-positive_values = 0
-for value in list_values:
-    if value > 0:
-        positive_values += 1
+value_1 = int(input("Enter value: "))
+value_2 = int(input("Enter value: "))
+value_3 = int(input("Enter value: "))
+
+positive_values = (value_1 > 0) + (value_2 > 0) + (value_3 > 0)
+
 print(f"Positive: {positive_values}")
-print(f"Negative: {len(list_values)-positive_values}")
+print(f"Negative: {3-positive_values}")
