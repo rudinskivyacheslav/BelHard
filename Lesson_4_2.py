@@ -3,9 +3,7 @@
 
 text = input("Enter text: ").replace(" ", "")
 
-dic = {i: 0 for i in text}
-for i in dic:
-    dic[i] = text.count(i)
+dic = {i: text.count((i)) for i in set(text)}
 
 for i in dic:
     print(f"{i}: {dic[i]}")
