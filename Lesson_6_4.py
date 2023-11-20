@@ -7,5 +7,5 @@ dictionary = {
     43345450: {"name": "Pit", "last_name": "Kaluzi", "phone_number": 3469847293, "email": "alex@gmail.com"},
     44833460: {"name": "Fil", "last_name": "Rudi", "phone_number": 3469847293, "email": None},
               }
-for user in filter(lambda u: u.get("email") is None or u.get("email") == "", dictionary.values()):
+for user in filter(lambda u: u.get("email"), dictionary.values()):
     print(user.get("name"))
